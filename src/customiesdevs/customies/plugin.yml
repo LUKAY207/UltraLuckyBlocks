@@ -1,0 +1,15 @@
+name: Customies
+description: A PocketMine-MP plugin that implements support for custom blocks, items and entities.
+
+main: customiesdevs\customies\Customies
+src-namespace-prefix: customiesdevs\customies
+version: 1.3.4
+api: 5.1.3
+
+authors:
+  - DenielWorld
+  - TwistedAsylumMC
+contributors:
+  - JackNoordhuis
+  - Unickorn
+  - abimek

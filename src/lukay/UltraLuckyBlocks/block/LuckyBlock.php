@@ -2,7 +2,6 @@
 
 namespace lukay\UltraLuckyBlocks\block;
 
-use customiesdevs\customies\block\CustomiesBlockFactory;
 use pocketmine\block\Block;
 use pocketmine\block\VanillaBlocks;
 use pocketmine\item\Item;
@@ -20,14 +19,9 @@ class LuckyBlock extends Block {
             ];
 
         $itemKey = mt_rand(array_key_first($itemList), array_key_last($itemList));
+        $itemMaxCount = $itemList[$itemKey]->getMaxStackSize();
+        $itemCount = mt_rand(1, $itemMaxCount);
 
-        if ($itemList[$itemKey] instanceof Item) {
-            $itemMaxCount = $itemList[$itemKey]->getMaxStackSize();
-            $itemCount = mt_rand(1, $itemMaxCount);
-
-            return [$itemList[$itemKey]->setCount($itemCount)];
-        }
-
-        return [CustomiesBlockFactory::getInstance()->get("custom:lucky_block")->asItem()];
+        return [$itemList[$itemKey]->setCount($itemCount)];
     }
 }
