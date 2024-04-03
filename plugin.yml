@@ -2,5 +2,7 @@ name: UltraLuckyBlocks
 main: lukay\UltraLuckyBlocks\Loader
 api: 5.0.0
 version: 0.0.1
+depend:
+  - Customies
 authors:
   - LUKAY
