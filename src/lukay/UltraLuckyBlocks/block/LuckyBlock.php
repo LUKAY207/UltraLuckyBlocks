@@ -74,7 +74,5 @@ class LuckyBlock extends Block {
         if ($itemKey == 11) {
             return [VanillaItems::LEATHER_CAP(), VanillaItems::LEATHER_TUNIC(), VanillaItems::LEATHER_PANTS(), VanillaItems::LEATHER_BOOTS()];
         }
-
-        return [$this->asItem()];
     }
 }
