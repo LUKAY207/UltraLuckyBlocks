@@ -8,11 +8,12 @@ use pocketmine\item\VanillaItems;
 
 class LuckyBlock extends Block {
 
-    public function getDrops(Item $item): array {
+    public function getDrops(Item $item): array
+    {
         $itemList =
             [
                 0 => "Netherite Equipment",
-                1 =>  "Netherite Armor",
+                1 => "Netherite Armor",
                 2 => "Diamond Equipment",
                 3 => "Diamond Armor",
                 4 => "Golden Equipment",
@@ -52,7 +53,5 @@ class LuckyBlock extends Block {
         } elseif ($itemKey == 11) {
             return [VanillaItems::LEATHER_CAP(), VanillaItems::LEATHER_TUNIC(), VanillaItems::LEATHER_PANTS(), VanillaItems::LEATHER_BOOTS()];
         }
-
-        return [$this->asItem()];
     }
 }
